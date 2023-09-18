@@ -31,7 +31,7 @@ const getData = async (page = 1, pageSize = 2) => {
     }
 }
 
-const page = async ({ searchParams }) => {
+const page = async ({ searchParams }: any) => {
     const { page } = searchParams
     let pageNumber = (parseInt(page))
     const { data, pagination } = await getData(pageNumber, 2)
@@ -43,7 +43,7 @@ const page = async ({ searchParams }) => {
 
             <div className='grid gap-4'>
                 {
-                    data.map(post => (
+                    data.map((post: any) => (
                         <PageCardImg post={post} />)
                     )
                 }

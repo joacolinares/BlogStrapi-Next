@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-export const PagePagination = ({ pagination }) => {
+export const PagePagination = ({ pagination }: any) => {
     console.log(pagination)
     const { pageCount } = pagination
     return (

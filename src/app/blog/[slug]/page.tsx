@@ -3,7 +3,7 @@ import React from 'react'
 import { fetchApi } from '../../../../helpers/fetch-api'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
-const page = async ({ params }) => {
+const page = async ({ params }: any) => {
 
     const getData = async (page = 1, pageSize = 2) => {
         const path = "/posts"
@@ -19,7 +19,7 @@ const page = async ({ params }) => {
 
         const test = await fetchApi(path, urlParamsObject)
         console.log(test.data)
-        const resp = test.data.filter(a => a.id == params.slug)
+        const resp = test.data.filter((a: any) => a.id == params.slug)
         console.log(resp[0].attributes
         )
         return resp

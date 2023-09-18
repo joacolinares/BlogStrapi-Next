@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-const PageCardImg = ({ post }) => {
+const PageCardImg = ({ post }: any) => {
     const { title, description } = post.attributes
     const { id } = post
     console.log(id)
